@@ -7,7 +7,7 @@ exports.calculateDisselUsageForDistance = async (req, res, next) => {
             res.status(500).json({message: 'Please make sure you have provided numbers for: distance, yearOfProduction and fuelUsagePer100km'});
         } else {
             const result = fuelUsagePer100km/100*distance;
-            res.status(200).json({message: `Dissel Usage For Distance is ${result}`});
+            res.status(200).json({message: `Diesel Usage For Distance is ${result}`});
 
         }
     } catch (error) {
