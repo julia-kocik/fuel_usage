@@ -1,4 +1,4 @@
-exports.calculateDisselUsageForDistance = async (req, res, next) => {
+exports.calculateDisselUsageForDistance = (req, res) => {
     try {
         const { distance, yearOfProduction, fuelUsagePer100km} = req.query;
         if(!distance || !yearOfProduction || !fuelUsagePer100km) {
@@ -15,7 +15,7 @@ exports.calculateDisselUsageForDistance = async (req, res, next) => {
     }
 }
 
-exports.probabilityOfUnitInjectorFail = async (req, res, next) => {
+exports.probabilityOfUnitInjectorFail = (req, res) => {
     try {
         const { vin } = req.query;
         const randomNumber = Math.floor(Math.random() * 101);
